@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Checking</title>
+    <link rel="stylesheet" href="style.css"/>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script src="server.js"></script>
+
+  </head>
+  <body>
+  <div class="container">
+  <div class="main">
+<h2>Checking</h2>
+<form name="checking" method="post"> 
+  <label>This is where I give all the good information about the different perks of the PACE Checking product or acquire further information.</label>
+  <label>Starting Balance</label>
+  <input type="number" name="balance" id="balance" min = "500" placeholder="Min is $500">
+    <input type="button" name="viewAccounts" id="viewAccounts" value="Open" onclick="createChecking()">
+    <input type="button" name="addAccount" id="addAccount" value="Back" onclick="retCheck()">
+  </form>
+
+    <script>
+      function createChecking() {
+        alert("Request is being Processed, thank you for opening an account with PACE Bank :)");
+        window.location.href = "options.html";
+      }
+      function retCheck() {
+        window.location.href = "products.html";
+      }
+    </script>
+
+  </body>
+</html>

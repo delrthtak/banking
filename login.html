@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Simple login</title>
+    <link rel="stylesheet" href="style.css"/>
+
+    <img src="image.png" alt="Trulli" width="50" height="34" align="middle">
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script src="server.js"></script>
+
+  </head>
+  <body>
+  <div class="container">
+  <div class="main">
+<h2>PACE Bank</h2>
+<form name="loginform" method="post"> 
+    <label>User name</label>
+    <input type="text" name="user" placeholder="username" required> 
+    <label>Password</label>
+    <input type="password" name="password" placeholder="password" required>
+    <input type="button" name="login" id="login" value="Login" onclick="validate()">
+    <input type="button" name="createAccount" id="createAccount" value="Create A New Account" onclick="create()">
+  </form>
+
+    <script>
+      function create() {
+        window.location.href = "create.html"
+      }
+      function validate() {
+      var usern = document.loginform.user.value; //input username
+      var passn = document.loginform.password.value; //input password
+      var username = "user";
+      var password = "pass";
+
+      if ((usern == username) && (passn == password)) {
+        alert ("Login was successful.");
+        window.location.href = "options.html";
+        return false;
+        } else {
+        alert ("Login was unsuccessful, please check your username and password.");
+        return false;
+        }
+    }
+    </script>
+
+  </body>
+</html>

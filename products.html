@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css"/>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script src="server.js"></script>
+
+  </head>
+  <body>
+  <div class="container">
+  <div class="main">
+<h2>Products</h2>
+<form name="products" method="post"> 
+    <input type="button" name="savings" id="savings" value="Savings" onclick="gosavings()">
+    <input type="button" name="checking" id="checking" value="Checking" onclick="gochecking()">
+    <input type="button" name="moneyMarket" id="moneyMarket" value="Money Market" onclick="gomoney()">
+    <input type="button" name="cd" id="cd" value="CD" onclick="gocd()">
+    <input type="button" name="iracd" id="iracd" value="IRA Cd" onclick="goiracd()">
+  </form>
+
+    <script>
+      function gosavings() {
+        window.location.href = "savings.html";
+      }
+      function gochecking() {
+        window.location.href = "checking.html";
+      }
+      function gomoney() {
+        window.location.href = "money.html";
+      }
+      function gocd() {
+        window.location.href = "cd.html";
+      }
+      function goiracd() {
+        window.location.href = "iracd.html";
+      }
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>Employment</title>
+    <link rel="stylesheet" href="style.css"/>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script src="server.js"></script>
+
+  </head>
+  <body>
+  <div class="container">
+  <div class="main">
+<h2>Employment</h2>
+<form name="employment" method="post"> 
+
+<!--   
+  <option value="employed">Employed</option>
+  <option value="self">Business Owner/Self-Employed</option>
+  <option value="notemployed">Not Employed</option>
+  <option value="student">Student</option>
+  <option value="retired">Retired</option> -->
+
+<input type="checkbox" id="employed" value="True" > Employed<br>
+<input type="checkbox" id="self" value="True" > Business Owner/Self-Employed<br>
+<input type="checkbox" id="notemployed" value="True"> Not Employed <br>
+<input type="checkbox" id="student" value="True"> Student <br>
+<input type="checkbox" id="retired" value="True"> Retired <br>
+
+<section id = "sectEmployed" style.displ>
+  <h3>Employer Information</h3>
+  <label>Employer</label>
+  <input type="text" name="employerName">
+  <select name="occupation">
+    <option value="Choose One" disabled>Choose One</option>
+    <option value="clerical" >Clerical</option>
+    <option value="consultant" >Consultant</option>
+    <option value="executive" >Executive</option>
+    <option value="government" >Government</option>
+    <option value="labor" >Laborer</option>
+    <option value="management" >Management</option>
+    <option value="sales" >Sales</option>
+    <option value="other" >Other</option>
+  </select>
+  <br>
+  <label>Years Employed</label>
+  <input type="text" name="yearsEmp">
+  <label>Country</label>
+  <input type="text" name="countryEmp">
+</section>
+
+<section id = "sectSelf" disabled>
+  <label>Business Name</label>
+  <input type="text" name="businessName">
+  <label>Type of Business</label>
+  <input type="text" name="businessType">
+  <label>Years Owned</label>
+  <input type="text" name="yearsOwned">
+</section>
+
+<section id = "sectElse" disabled>
+  <label>Sources of Income (Choose all that apply)</label>
+  <select name="incomeSource" multiple>
+    <option value="none">None</option>
+    <option value="annuity">Annuity</option>
+    <option value="government benefits">Government Benefits</option>
+    <option value="inheritance/family wealth">Inheritance/Family Wealth</option>
+    <option value="other">Other</option>
+  </select>
+</section>
+
+<input type="button" name="products" id="products" value="Select Product" onclick="searchproducts()">
+<input type="button" name="opt" id="opt" value="Options" onclick="gooptions()">
+
+</form>
+    <script>
+    if (document.getElementById("employed")) {
+      document.getElementById("sectEmployed").disabled = false;
+    }
+    if (document.getElementById("self")) {
+      document.getElementById("sectSelf").disabled = false;
+    }
+    if (document.getElementById("notemployed") || document.getElementById("student") || document.getElementById("retired")) {
+      document.getElementById("sectEmployed").disabled = false;
+    }
+    function searchproducts() {
+      window.location.href = "products.html";
+    }
+    function gooptions() {
+      window.location.href = "Options.html";
+    }
+    
+    </script>
+
+  </body>
+</html>

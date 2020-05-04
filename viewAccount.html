@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Account Info</title>
+    <link rel="stylesheet" href="style.css"/>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script src="server.js"></script>
+
+  </head>
+  <body>
+  <div class="container">
+  <div class="main">
+<h2>Account Information</h2>
+<form name="viewing" method="post"> 
+
+<h2>This is where I would pull Account Information from the Database</h2>
+    <input type="button" name="ret" id="ret" value="Return" onclick="returnTo()">
+    <input type="button" name="addAccount" id="addAccount" value="Add Account" onclick="addProduct()">
+  </form>
+
+    <script>
+    function addProduct() {
+        window.location.href = "products.html";
+      }
+    function returnTo() {
+        window.location.href = "options.html";
+      }
+    </script>
+
+  </body>
+</html>
