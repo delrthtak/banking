@@ -1,2 +1,2 @@
 # banking
-my attempt at a banking web app
+my attempt at a banking web app, not complete
